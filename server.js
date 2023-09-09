@@ -82,11 +82,11 @@ app.use(
     })
 );
 
+app.use("/auth", authRouter.router);
 app.use("/products", isAuth(), productsRouter.router);
 app.use("/categories", isAuth(), categoriesRouter.router);
 app.use("/brands", isAuth(), brandsRouter.router);
 app.use("/users", isAuth(), usersRouter.router);
-app.use("/auth", authRouter.router);
 app.use("/cart", isAuth(), cartRouter.router);
 app.use("/orders", isAuth(), ordersRouter.router);
 
