@@ -26,7 +26,7 @@ const path = require('path')
 //WEBHOOK
 const endpointSecret = process.env.ENDPOINT_SECRET;
 
-app.post('/webhook', express.raw({ type: 'application/json' }), async (request, response) => {
+app.post('/webhook', express.raw({ type: 'application/json' }), (request, response) => {
     const sig = request.headers['stripe-signature'];
 
     let event;
