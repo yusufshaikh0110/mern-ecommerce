@@ -93,7 +93,7 @@ app.use("/users", isAuth(), usersRouter.router);
 app.use("/cart", isAuth(), cartRouter.router);
 app.use("/orders", isAuth(), ordersRouter.router);
 
-app.get("*", (req, res) => res.sendFile(path.resolve('build', 'index.html')))
+app.get("*", (req, res) => res.sendFile(path.resolve('build', 'index.html')));
 
 //Passport Strategies
 passport.use(
